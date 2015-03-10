@@ -19,8 +19,11 @@ $(document).ready(function(){
       $('body').append(dancer.$node);
     }
     // console.log(window.dancers);
-
   });
+
+  
+  // loop for interactivity
+
 
 
   $(".addDancerButton").on("click", function(event){
@@ -56,5 +59,44 @@ $(document).ready(function(){
 
 $('body').on("mouseover", ".dancer",function(event){
   $(this).css({border:"10px solid black"}).show();
-})
+});
 
+$('body').on("mouseover", ".largeDancer",function(event){
+  $(this).css({border:"20px solid magenta"}).show();
+});
+
+$('body').on("mouseover", ".nonDancer",function(event){
+  $(this).css({border:"15px solid cyan"}).show();
+});
+
+
+$("body").on("click", ".dancer",function(){
+    
+     var position1 = $(this).position();
+
+     console.log(position1);
+     var minPosition=Number.POSITIVE_INFINITY , index=-1;
+     for (var j=0; j<window.dancers.length; j++){
+      if (Math.abs(window.dancers[j].position.top-position1.top)>1 && Math.abs(window.dancers[j].position.left -position1.left)>1){
+        var position2=window.dancers[j].position;
+        console.log("position",position2);
+        var distance=Math.pow((position1.top-position2.top),2)+Math.pow((position1.left-position2.left),2);
+        if (distance<minPosition){
+          index=j;
+          minPosition=distance;
+        }
+      }
+      else {
+        console.log('here');
+        
+     }
+   }
+     // outside, want to do something about the neighbor
+     $(this).css({border: "10px solid orange"}).show();
+     console.log(index);
+     console.log(minPosition);
+     var dancer=window.dancers[index];
+     $(dancer.$node).css({border: "10px solid orange"}).show();
+     
+
+});

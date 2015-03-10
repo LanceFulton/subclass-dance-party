@@ -10,26 +10,57 @@ body{
   background-image: url("surfing.jpg");
   -webkit-background-size: cover;
 }
+
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: #FF8530;
+  text-decoration: none;
 }
 
-.title .arrange {
-  padding:5px 12px;
-  float:right;
+body, a:hover{
+  background-color: #454545;
+  color: #FFF;
 }
-.title .addDancerButton{
+
+.title{
+  font-family: sans-serif;
+  background-color: #777;
+  float: left;
+  background: #303030;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 1px;
+  margin-left: 5px;
+}
+
+.arrange {
+  font-family: sans-serif;
+  font-size: .75em;
+  padding:5px 12px;
+  margin-right: 100px;
+  margin-top: 4px;
+  float:right;
+  background: #303030;
+}
+
+.addDancerButton{
+  font-family: sans-serif;
+  font-size: .75em;
   padding:5px 12px;
   float:right;
+  background: #303030;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 4px;
 }
 
 .topbar{
   height:32px;
   background-color: #555;
 }
-.title{
-  background-color: #777;
-}
+
+
 .dancer{
   border:10px solid red;
   border-radius:10px;
