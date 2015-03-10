@@ -9,10 +9,16 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+
+.title .arrange {
   padding:5px 12px;
   float:right;
 }
+.title .addDancerButton{
+  padding:5px 12px;
+  float:right;
+}
+
 .topbar{
   height:32px;
   background-color: #555;
@@ -26,14 +32,44 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+.leftDancer{
+  border:10px solid red;
+  border-radius:10px;
+  position:absolute;
+  left: 50px;
+}
+
 .largeDancer{
   border:20px solid blue;
   border-radius:20px;
   position:absolute;
+
+}
+
+.leftLargeDancer{
+  border:20px solid blue;
+  border-radius:20px;
+  position:absolute;
+  
 }
 
 .nonDancer {
   border: 15px solid green;
   border-radius: 15px;
   position:absolute;
+}
+
+.leftNonDancer {
+  border: 15px solid green;
+  border-radius: 15px;
+  position:absolute;
+}
+
+#alignLeft {
+  /*border: 15px solid yellow;
+  border-radius: 15px;*/
+  /*position:absolute;
+  left: 10px;*/
+  left: 40px;
+  
 }
