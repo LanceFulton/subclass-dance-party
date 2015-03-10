@@ -20,7 +20,8 @@ $(document).ready(function(){
     }
     // console.log(window.dancers);
 
-  })
+  });
+
 
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
@@ -52,4 +53,8 @@ $(document).ready(function(){
     window.dancers.push(dancer);
   });
 });
+
+$('body').on("mouseover", ".dancer",function(event){
+  $(this).css({border:"10px solid black"}).show();
+})
 
